@@ -1,0 +1,61 @@
+{
+    id: 0001,
+    name: 'Tipping Buddah',
+    url: 'http://nerdist.com/cashing-in-with-t-j-miller-1-tipping-buddah/',
+    categories: {
+        cashphrases: [
+            {
+                id: 0001almphgyu,
+                attribution: 'both',
+                name: 'Kanus',
+                definition: 'Definition goes here string',
+                similar: [
+                    //array of similar cashphrase ids
+                    0026aelnvcod,
+                    0095kljnadfs
+                ]
+            },
+        ],
+
+        quotes: [
+            'Quote here that is not a cashphrase, just a funny thing',
+            'From the episode that I decide to catalog'
+        ],
+
+        tjpoolboynames: [
+            'Red-lefty',
+            'Debrickishaw',
+            'Childress'
+        ],
+
+        nancyquotes: [
+            "Ohh god I love her. I would love to make love to her. Just probe her with my animal gelatin, you know..from behind. Then as I do it go '(long sigh) push the fear on our culture.'"
+        ],
+
+        lightinground: {
+            length: 193, //(in seconds)
+            notes: 'Super hot and spicy'
+        }
+    }
+}
+
+
+options:
+
+A. Create new episode entry (pass ep number, check if exists or create new episode object)
+    If exists, ask if want to edit entry (go to option B)
+    or...
+    Write form with input for ep name and url and submit button
+        Right side area with 5 category options, middle blank -- and list of cashphrases and ids on left
+            1. new cashphrase - input: attribution, name, definition, similar ids,
+            2. new quote - input: quote
+            3. new tjpoolboyname - input: name
+            4. new nancy quote - input: quote
+            5. new lightning round - input: length, [notes]
+
+        At bottom screen, show current constructed ep, each will new object with all these properties, edit will allow you to send http request to change info.
+
+or...
+1b. Edit existing episode extry (query master object for all ep numbers and return list to user)
+        Return same form as described above, just the lower section with existing info is already constructed
+
