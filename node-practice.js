@@ -34,6 +34,9 @@ console.log("Server running at http://127.0.0.1:1337/");
 //https://www.npmjs.com/package/jsonfile <--- use to read and write json
 
 function createServerCallback(req, res){
+    console.log(req.url.toString());
+
+
     if(req.url === "/index.html"){
         sendFileContent(res, 'index.html', "text/html");
     }
