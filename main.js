@@ -84,36 +84,3 @@ function makeNewSchema(){
     });
 }
 
-
-//put in node-practice.js....put in if statement that checks for '=' in 'createServerCallback' function
-function handleKeyVal(reqString){
-    var resObj = {};
-    var tempString = reqString;
-
-    if( tempString.indexOf('&') != -1){
-        do {
-            var ampLocation = tempString.indexOf('&');
-            var pair = tempString.slice(0, ampLocation);
-
-            addKeyValToObj(pair, resObj);
-
-            tempString = tempString.slice(ampLocation + 1);
-
-        } while ( tempString.indexOf('&') != -1 );
-
-        addKeyValToObj(tempString, resObj);
-    }
-    else if( tempString.indexOf('=') != -1){
-        addKeyValToObj(tempString, resObj);
-    }
-
-    function addKeyValToObj(pair, obj){
-        var eqLocation = tempString.indexOf('=');
-        var key = pair.slice(0, eqLocation);
-        var value = pair.slice(eqLocation + 1);
-
-        obj[key] = value;
-    }
-
-    console.log(resObj);
-}
